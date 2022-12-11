@@ -78,4 +78,48 @@ for( let color of colorsListOf) {
     console.log(color);   // Here we direct get an element
 }
 
+//Break and continue
+console.log("Driver going in 90 speed");
+checkSpeed(90);
+function checkSpeed(speed) {
+    const speedLimit = 70;
+    if(speed <= speedLimit){
+        console.log('ok');
+    }
+     else {
+        const points = Math.floor((speed - speedLimit));
+        if(points >= 12){
+            console.log("Your speed limit too high, License Suspended");
+        } 
+        else {
+            console.log("Points", points);
+        }
+     }
+}
+const Movie = {
+    name : 'RRR',
+    rating: 8.5,
+    director: 'Rajmouli',
+    collections: 1000
+}
 
+showStringProperties(Movie);
+
+function showStringProperties(obj) {
+    for(let key in obj) {
+        if(typeof obj[key] === 'string'){
+            console.log(key,obj[key]);
+        }
+    }
+}
+
+showStars(8);
+function showStars(rows) {
+    for(let row=1;row<=rows; row++) {
+        let pattern = '';
+        for(let i=0;i<row;i++) {
+            pattern += 'x';
+        }
+        console.log(pattern);
+    }
+}
