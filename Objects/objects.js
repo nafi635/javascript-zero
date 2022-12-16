@@ -138,3 +138,21 @@ let address1 = new Address('a', 'b', 'c');
 let address2 = new Address('a', 'b', 'c');
 console.log("Address equal " + areEqual(address1,address2));
 console.log("Address equal " + areSame(address1,address2));  // it returns false as two different objects, two different memory
+
+
+
+// CLOSURE concept
+function badminton() {
+    let shoesCost = 2500;
+    let shuttleCost = 60;
+    let rocketCost = 700;
+    let monthsFees = 3000;
+
+    let printCost = function printTotalCost() {
+        return shoesCost + shuttleCost + rocketCost + monthsFees;
+    }
+
+    function wakeupMorning() {
+        return printTotalCost();
+    }
+}

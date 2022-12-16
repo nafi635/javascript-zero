@@ -70,3 +70,13 @@ const postiveNumbersLists = numbers.filter( number => number >2);
 
 console.log("Numbers ", numbers);
 console.log(postiveNumbersList);
+
+//Reduce method
+const numbersInt = [1,2,3,4,5];
+
+
+const sum = numbersInt.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+}, 0 );
+
+console.log(sum);
